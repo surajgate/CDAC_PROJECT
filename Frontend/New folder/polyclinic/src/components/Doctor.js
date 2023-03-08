@@ -22,31 +22,36 @@ export default function Doctor() {
                 console.log('API DATA CALLED');
                 console.log(valueFromAPI);
                 setcat(valueFromAPI)
-                
+
             })
     }, []);
 
     var M1 = () => {
-        // alert("abc");
         var email = document.getElementById("exampleInputEmail1").value;
         var password = document.getElementById("exampleInputPassword1").value;
-
+        alert(email +" "+ password);
+        var b = false;
+        console.log(b);
         console.log(email);
         console.log(password);
 
-        cat.map((obj) => {
-            console.log(obj.email);
-           
-            if (obj.email === email && obj.password === password) {
+        cat.forEach(element => {
+                if (element.email === email && element.password === password) {
+                    b = true;
+                }
+            });
+       
+        console.log(b);
+        c();
+        function c() {
+
+            if (b === true) {
                 navigate("/doctor-home");
             }
-            // else {
-            //     alert("Credentials Mismatched");
-            // }
-        });
-        // alert("Credentials Mismatched");
-
-
+            else {
+                navigate("/doctor");
+            }
+        }
     }
 
     return (
@@ -56,7 +61,7 @@ export default function Doctor() {
                 <h1 class="text-center mb-4 display-5">Login</h1>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
