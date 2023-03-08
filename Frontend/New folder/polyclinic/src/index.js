@@ -4,6 +4,9 @@ import ReactDOM from "react-dom/client"
 import Patient from "./components/Patient";
 import Doctor from "./components/Doctor";
 import DoctorHome from "./components/DoctorHome";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Appointment from "./components/Appointment";
 
 const router1 = createBrowserRouter([
   {
@@ -21,6 +24,18 @@ const router1 = createBrowserRouter([
   {
     path:"/doctor-home",
     element:<DoctorHome/>
+  },
+  {
+    path:"/login",
+    element:<Login/>,
+  },
+  {
+    path:"/register",
+    element:<Register/>
+  },
+  {
+    path:"/appointment",
+    element:<Appointment/>
   }
 ])
 

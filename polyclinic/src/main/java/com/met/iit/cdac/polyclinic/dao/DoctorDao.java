@@ -33,10 +33,19 @@ public class DoctorDao {
 				new BeanPropertyRowMapper<Doctor>(Doctor.class));
 	}
 	
-	public Doctor getDoctor(int id) {
+	public Doctor getDoctor(String email) {
+		System.out.println("In Dao");
+		try {
+		Doctor Doc =  jdbcTemplate.queryForObject("select * from doctor where email=?", 
+				new Object[] {email}, new BeanPropertyRowMapper<>(Doctor.class));
+		System.out.println(Doc);
+		return Doc;
 		
-		return jdbcTemplate.queryForObject("select * from doctor where doctor_id=?", 
-				new Object[] {id}, new BeanPropertyRowMapper<>(Doctor.class));
+		}
+		catch(Exception e) {
+			Doctor doc = null;
+			return doc;
+		}
 	}
 	
 	class DoctorMapper implements RowMapper<Doctor> {

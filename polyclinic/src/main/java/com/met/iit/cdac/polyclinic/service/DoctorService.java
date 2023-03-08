@@ -24,6 +24,7 @@ public class DoctorService {
 		}
 		
 		doctorDao.save(doctor);
+	
 		System.out.println("Doctor DAO class :" + doctor.getClass());
 	}
 	
@@ -32,8 +33,9 @@ public class DoctorService {
 		return doctorDao.getAllDoctors();
 	}
 	
-	public Doctor getDoctor(int id) {
+	public Doctor getDoctor(String id) {
 		
 		return doctorDao.getDoctor(id);
 	}
+	
 }
