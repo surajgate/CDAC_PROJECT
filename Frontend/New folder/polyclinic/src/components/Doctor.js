@@ -26,6 +26,10 @@ export default function Doctor() {
                 console.log('API DATA CALLED');
                 console.log(valueFromAPI);
                 setcat(valueFromAPI)
+<<<<<<< HEAD
+=======
+
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
             })
         // fetch("http://localhost:8080/login/logintest",{
         //     method: 'POST',
@@ -45,13 +49,18 @@ export default function Doctor() {
     var M1 = () => {
         var email = document.getElementById("exampleInputEmail1").value;
         var password = document.getElementById("exampleInputPassword1").value;
+<<<<<<< HEAD
         alert(email + " " + password );
+=======
+        alert(email +" "+ password);
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
         var b = false;
         console.log(b);
         console.log(email);
         console.log(password);
 
         cat.forEach(element => {
+<<<<<<< HEAD
             if (element.email === email && element.password === password) {
                 b = true;
                 doctor_id = element.doctor_id;
@@ -59,6 +68,13 @@ export default function Doctor() {
             }
         });
 
+=======
+                if (element.email === email && element.password === password) {
+                    b = true;
+                }
+            });
+       
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
         console.log(b);
         c();
         function c() {
@@ -74,11 +90,19 @@ export default function Doctor() {
     return (
         <div className="container-fluid w-25 p-3 h-100 mt-5 ">
 
+<<<<<<< HEAD
             <form className="form-control-md">
                 <h1 className="text-center mb-4 display-5">Login</h1>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" />
+=======
+            <form class="form-control-md">
+                <h1 class="text-center mb-4 display-5">Login</h1>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
                 </div>
                 <div className="mb-3">
                     <label for="exampleInputPassword1" className="form-label">Password</label>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "../css/Appointment.css"
@@ -149,4 +150,12 @@ export default function Appointment() {
             </div>
         </div>
     )
+=======
+import React from 'react'
+
+export default function Appointment() {
+  return (
+    <div>Appointment</div>
+  )
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
 }
