@@ -25,6 +25,13 @@ export default function Patient() {
                                 </li>
                                 <li class="nav-item px-2">
                                     <a class="nav1 nav-link" href="#specialities">Specialities</a>
+<<<<<<< HEAD
+=======
+                                </li>
+                                <li class="nav-item px-2">
+                                    <button class="nav1 btn btn-outline-success">Book Appoinment</button>
+
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
                                 </li>
                                 <li class="nav-item px-2">
                                     <button class="nav1 btn btn-outline-success" onClick={() => navigate("/doctor")}>I'm Doctor</button>

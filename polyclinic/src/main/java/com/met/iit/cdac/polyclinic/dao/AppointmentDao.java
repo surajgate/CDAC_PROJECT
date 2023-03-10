@@ -34,8 +34,13 @@ public class AppointmentDao {
 	
 	public Collection<Appointment> getAppointment(int id) {
 		
+<<<<<<< HEAD
 		return jdbcTemplate.query("select * from appointment where doctor_id=?", 
 				new Object[] {id}, new BeanPropertyRowMapper<Appointment>(Appointment.class));
+=======
+		return jdbcTemplate.queryForObject("select * from appointment where doctor_id=?", 
+				new Object[] {id}, new BeanPropertyRowMapper<>(Appointment.class));
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
 	}
 	
 	class AppointmentMapper implements RowMapper<Appointment> {

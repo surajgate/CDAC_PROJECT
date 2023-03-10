@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+<<<<<<< HEAD
 export var p_id;
+=======
+<<<<<<< HEAD
+export var p_id;
+=======
+
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
 export default function Login() {
 
     const [cat, setcat] = useState([])
@@ -28,7 +36,14 @@ export default function Login() {
             cat.forEach(element => {
                     if (element.email === email && element.password === password) {
                         b = true;
+<<<<<<< HEAD
                         p_id = element.patient_id
+=======
+<<<<<<< HEAD
+                        p_id = element.patient_id
+=======
+>>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
                     }
                 });
            

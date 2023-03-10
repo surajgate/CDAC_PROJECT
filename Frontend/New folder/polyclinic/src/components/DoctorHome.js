@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
 import { doctor_id } from './Doctor';
 import logo from "../images/Logo-navbar.png"
+=======
+import { useNavigate } from 'react-router-dom';
+import { doctor_id } from './Doctor';
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
 export default function DoctorHome() {
 
     document.body.style.backgroundColor = "white";
@@ -27,6 +32,7 @@ export default function DoctorHome() {
             })
     }, []);
 
+<<<<<<< HEAD
 
     // var M1 = () => {
 
@@ -105,6 +111,27 @@ export default function DoctorHome() {
 
                             </tr>
                         </tbody>
+=======
+    var M1 = () => {
+
+        abc.forEach(element => {
+
+        });
+
+
+    }
+    return (
+        <div>DoctorHome
+            <table className='table'>
+                {
+                    xyz.length > 0 && xyz.map((val) =>
+                        <tr>
+                            <td>{val._id}</td>
+                            <td>{val.name}</td>
+                            <td>{val.age}</td>
+
+                        </tr>
+>>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
                     )
                 }
             </table>
