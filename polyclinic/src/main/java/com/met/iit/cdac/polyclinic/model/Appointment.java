@@ -16,6 +16,9 @@ public class Appointment {
 	public void setAppointment_number(int appointment_number) {
 		this.appointment_number = appointment_number;
 	}
+	
+	
+
 	public int getPatient_id() {
 		return patient_id;
 	}
@@ -40,6 +43,7 @@ public class Appointment {
 	public void setTime_of_appointment(String time_of_appointment) {
 		this.time_of_appointment = time_of_appointment;
 	}
+	
 	@Override
 	public String toString() {
 		return "Appointment [appointment_number=" + appointment_number + ", patient_id=" + patient_id + ", doctor_id="

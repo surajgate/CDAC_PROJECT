@@ -34,7 +34,7 @@ public class AppointmentDao {
 	
 	public Appointment getAppointment(int id) {
 		
-		return jdbcTemplate.queryForObject("select * from doctor where doctor_id=?", 
+		return jdbcTemplate.queryForObject("select * from appointment where doctor_id=?", 
 				new Object[] {id}, new BeanPropertyRowMapper<>(Appointment.class));
 	}
 	
