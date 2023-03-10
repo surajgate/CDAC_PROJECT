@@ -2,8 +2,16 @@ package com.met.iit.cdac.polyclinic.model;
 
 import java.sql.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Patient {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int patient_id;
 	private String first_name;
 	private String last_name;
@@ -17,7 +25,7 @@ public class Patient {
 	private String email;
 	private String password;
 	private String confirm_password;
-	private int doctor_id;
+//	private int doctor_id;
 	
 	public int getPatient_id() {
 		return patient_id;
@@ -124,22 +132,24 @@ public class Patient {
 		this.confirm_password = confirm_password;
 	}
 
-	public int getDoctor_id() {
-		return doctor_id;
-	}
-
-	public void setDoctor_id(int doctor_id) {
-		this.doctor_id = doctor_id;
-	}
-
 	@Override
 	public String toString() {
 		return "Patient [patient_id=" + patient_id + ", first_name=" + first_name + ", last_name=" + last_name
 				+ ", patient_age=" + patient_age + ", blood_group=" + blood_group + ", gender=" + gender
 				+ ", date_of_birth=" + date_of_birth + ", phone_number=" + phone_number + ", address=" + address
 				+ ", username=" + username + ", email=" + email + ", password=" + password + ", confirm_password="
-				+ confirm_password + ", doctor_id=" + doctor_id + "]";
+				+ confirm_password + "]";
 	}
+
+//	public int getDoctor_id() {
+//		return doctor_id;
+//	}
+//
+//	public void setDoctor_id(int doctor_id) {
+//		this.doctor_id = doctor_id;
+//	}
+
+	
 	
 	
 }

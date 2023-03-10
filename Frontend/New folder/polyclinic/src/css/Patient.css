@@ -2,17 +2,12 @@
     margin: 0px;
     padding: 0px;
   }
-img {
-    /* vertical-align: middle; */
-    max-height: 10%;
-    width: 4%;
-    border-radius: 100%;
-}
-/* body{
-    background-image:none;
-  } */
 
-.nav1 {
-    margin-right: 30px;
+section .patient_home_banner {
+  padding-bottom: 80px;
+  margin-top: 0px;
 }
 
+.mb-6{
+  margin-bottom: 200px !important;
+}

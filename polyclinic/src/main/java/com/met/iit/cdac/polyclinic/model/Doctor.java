@@ -1,7 +1,12 @@
 package com.met.iit.cdac.polyclinic.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Doctor {
 
+	
 	private int doctor_id;
 	private String doctor_name;
 	private int doctor_age;

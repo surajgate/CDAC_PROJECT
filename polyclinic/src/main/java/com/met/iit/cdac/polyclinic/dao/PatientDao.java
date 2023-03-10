@@ -21,10 +21,10 @@ public class PatientDao {
 	
 	public void save(Patient patient) {
 		
-		jdbcTemplate.update("insert into Patient(patient_id, first_name, last_name, patient_age, blood_group, gender, date_of_birth, phone_number, address, username, email, password, confirm_password, doctor_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+		jdbcTemplate.update("insert into Patient(patient_id, first_name, last_name, patient_age, blood_group, gender, date_of_birth, phone_number, address, username, email, password, confirm_password) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
 				new Object[] {patient.getPatient_id(),patient.getFirst_name(),patient.getLast_name(),patient.getPatient_age(),patient.getBlood_group(),
 						patient.getGender(),patient.getDate_of_birth(),patient.getPhone_number(),
-				patient.getAddress(),patient.getUsername(),patient.getEmail(),patient.getPassword(),patient.getConfirm_password(),patient.getDoctor_id()}
+				patient.getAddress(),patient.getUsername(),patient.getEmail(),patient.getPassword(),patient.getConfirm_password()}
 		);
 	}
 	
@@ -57,7 +57,7 @@ public class PatientDao {
 			patient.setEmail(rs.getString("email"));
 			patient.setPassword(rs.getString("password"));
 			patient.setConfirm_password(rs.getString("confirm_password"));
-			patient.setDoctor_id(rs.getInt("doctor_id"));
+			
 			
 			return patient;
 			

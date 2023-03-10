@@ -32,7 +32,7 @@ public class AppointmentService {
 		return appointmentrDao.getAllAppointments();
 	}
 	
-	public Appointment getAppointment(int id) {
+	public Collection<Appointment> getAppointment(int id) {
 		
 		return appointmentrDao.getAppointment(id);
 	}

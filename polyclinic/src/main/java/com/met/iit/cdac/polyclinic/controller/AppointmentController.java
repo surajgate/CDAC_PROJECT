@@ -35,13 +35,13 @@ public class AppointmentController {
 		return new ResponseEntity<Collection<Appointment>>(allAppointments, HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "allAppointment/{id}", produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<Appointment> getAppointment(@PathVariable int id) {
+	@RequestMapping(value = "allAppointment/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	
+	public ResponseEntity<Collection<Appointment>> getAppointment(@PathVariable int id) {
 
-		Appointment appointment = appointmentService.getAppointment(id);
+		Collection<Appointment> appointment = appointmentService.getAppointment(id);
 
-		return new ResponseEntity<Appointment>(appointment, HttpStatus.OK);
+		return new ResponseEntity<Collection<Appointment>>(appointment, HttpStatus.OK);
 	}
 
 	@PutMapping(value = "updateAppointment", produces = { MediaType.APPLICATION_JSON_VALUE,

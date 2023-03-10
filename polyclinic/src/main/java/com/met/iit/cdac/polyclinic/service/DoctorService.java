@@ -33,7 +33,7 @@ public class DoctorService {
 		return doctorDao.getAllDoctors();
 	}
 	
-	public Doctor getDoctor(String id) {
+	public Doctor getDoctor(int id) {
 		
 		return doctorDao.getDoctor(id);
 	}
