@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-<<<<<<< HEAD
 export var p_id;
-=======
-<<<<<<< HEAD
-export var p_id;
-=======
-
->>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
->>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
 export default function Login() {
+
+    document.body.style.backgroundColor = "rgb(215, 230, 253)"
 
     const [cat, setcat] = useState([])
     const navigate = useNavigate();
@@ -36,14 +30,7 @@ export default function Login() {
             cat.forEach(element => {
                     if (element.email === email && element.password === password) {
                         b = true;
-<<<<<<< HEAD
                         p_id = element.patient_id
-=======
-<<<<<<< HEAD
-                        p_id = element.patient_id
-=======
->>>>>>> e617537766bea6fd76ce2329f2db9b00de39d21c
->>>>>>> b68e482f1d0d393f28621c8dcaae5f30d0497f59
                     }
                 });
            
@@ -63,7 +50,7 @@ export default function Login() {
     <div className="container-fluid w-25 p-3 h-100 mt-5 ">
 
             <form className="form-control-md">
-                <h1 className="text-center mb-4 display-5">Login</h1>
+                <h1 className="text-center mb-4 display-5">Patient Login</h1>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>    
                     <input type ="text"  className="form-control" id="exampleInputEmail1"/>
